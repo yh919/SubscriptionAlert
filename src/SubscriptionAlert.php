@@ -21,7 +21,7 @@ class SubscriptionAlert extends Card
         'title' => 'Subscription Alert',
         'message' => 'This is a test message for the Subscription Alert card.',
         'payUrl' => url('/pay-subscription'),
-    ];
+    ]; 
 }
 
 }
