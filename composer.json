@@ -1,29 +1,29 @@
 {
-    "name": "sellerctrl/subscription-alert",
-    "description": "A Laravel Nova card.",
-    "keywords": [
-        "laravel",
-        "nova"
-    ],
-    "license": "MIT",
-    "require": {
-        "php": "^7.3|^8.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Sellerctrl\\SubscriptionAlert\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Sellerctrl\\SubscriptionAlert\\CardServiceProvider"
-            ]
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "yh919/subscription-alert",
+  "description": "A Laravel Nova card.",
+  "keywords": [
+    "laravel",
+    "nova"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7.3|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sellerctrl\\SubscriptionAlert\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sellerctrl\\SubscriptionAlert\\CardServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
