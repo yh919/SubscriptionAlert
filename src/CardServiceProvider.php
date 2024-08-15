@@ -17,7 +17,7 @@ class CardServiceProvider extends ServiceProvider
     public function boot()
     {
         // Register the routes
-        $this->registerRoutes();
+        $this->registerRoutes(); 
 
         // Register Nova assets
         Nova::serving(function (ServingNova $event) {
