@@ -1,6 +1,6 @@
 <?php
 
-namespace Sellerctrl\SubscriptionAlert;
+namespace Yh919\SubscriptionAlert;
 
 use Laravel\Nova\Card;
 use Illuminate\Support\Facades\Auth;

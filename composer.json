@@ -11,13 +11,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Sellerctrl\\SubscriptionAlert\\": "src/"
+      "Yh919\\SubscriptionAlert\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Sellerctrl\\SubscriptionAlert\\CardServiceProvider"
+        "Yh919\\SubscriptionAlert\\CardServiceProvider"
       ]
     }
   },
