@@ -1,58 +1,54 @@
 <template>
-  <div class="notification-overlay" v-if="notification">
-    <div class="notification-card">
+  <div class="card relative">
+    <div v-if="notification" class="notification-content">
       <h3 class="notification-title">{{ notification.title }}</h3>
       <p class="notification-message">
         {{ notification.message }}
       </p>
-      <a :href="notification.payUrl" class="notification-link">Pay Now</a>
+      <a
+        v-if="notification.payUrl"
+        :href="notification.payUrl"
+        class="notification-link"
+        >Pay Now</a
+      >
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["data"],
+  props: ["card"], // Use "card" prop to match Nova naming conventions
   data() {
     return {
-      notification: this.data,
+      notification: this.card, // Bind card prop to notification object
     };
   },
 };
 </script>
 
 <style>
-.notification-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.notification-card {
-  background: #333;
-  color: #fff;
+.card {
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
-  max-width: 400px;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.notification-content {
+  text-align: center;
 }
 
 .notification-title {
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin-bottom: 10px;
+  color: #333;
 }
 
 .notification-message {
   font-size: 1em;
   margin-bottom: 20px;
+  color: #666;
 }
 
 .notification-link {
