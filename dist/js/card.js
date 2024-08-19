@@ -13,10 +13,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["data"],
+  props: ["card"],
+  // Use "card" prop to match Nova naming conventions
   data: function data() {
     return {
-      notification: this.data
+      notification: this.card // Bind card prop to notification object
     };
   }
 });
@@ -37,11 +38,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 
 var _hoisted_1 = {
-  key: 0,
-  "class": "notification-overlay"
+  "class": "card relative"
 };
 var _hoisted_2 = {
-  "class": "notification-card"
+  key: 0,
+  "class": "notification-content"
 };
 var _hoisted_3 = {
   "class": "notification-title"
@@ -51,10 +52,11 @@ var _hoisted_4 = {
 };
 var _hoisted_5 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return $data.notification ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.notification.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.notification.message), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [$data.notification ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.notification.title), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.notification.message), 1 /* TEXT */), $data.notification.payUrl ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+    key: 0,
     href: $data.notification.payUrl,
     "class": "notification-link"
-  }, "Pay Now", 8 /* PROPS */, _hoisted_5)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true);
+  }, "Pay Now", 8 /* PROPS */, _hoisted_5)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
@@ -90,7 +92,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.notification-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.5);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 9999;\n}\n.notification-card {\n  background: #333;\n  color: #fff;\n  padding: 20px;\n  border-radius: 8px;\n  max-width: 400px;\n  width: 100%;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n}\n.notification-title {\n  font-size: 1.5em;\n  margin-bottom: 10px;\n}\n.notification-message {\n  font-size: 1em;\n  margin-bottom: 20px;\n}\n.notification-link {\n  color: #4caf50;\n  text-decoration: none;\n  font-weight: bold;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.card {\n  background: #fff;\n  padding: 20px;\n  border-radius: 8px;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n  color: #333;\n}\n.notification-content {\n  text-align: center;\n}\n.notification-title {\n  font-size: 1.25em;\n  margin-bottom: 10px;\n  color: #333;\n}\n.notification-message {\n  font-size: 1em;\n  margin-bottom: 20px;\n  color: #666;\n}\n.notification-link {\n  color: #4caf50;\n  text-decoration: none;\n  font-weight: bold;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
